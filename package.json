@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "axios": "^1.10.0",
+    "esdoc": "^1.1.0",
+    "esdoc-standard-plugin": "^1.0.0",
+    "json-server": "^0.17.4"
+  },
+  "scripts": {
+    "json-server": "node ../json-server/server.js"
+  }
+}
