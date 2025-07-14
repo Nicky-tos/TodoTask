@@ -127,13 +127,13 @@ document.addEventListener("DOMContentLoaded", () => {
 				</div>
 			</div>`;
 
-			const taskCheckbox = taskEl.querySelector('input.form-checkbox');
+			const taskCheckbox = taskEl.querySelector('.form-checkbox');
 			taskCheckbox.addEventListener('change', () => toggleCompleteTask(task.id));
 
-			const taskEditButton = taskEl.querySelector('div.edit-task');
+			const taskEditButton = taskEl.querySelector('.edit-task');
 			taskEditButton.addEventListener('click', () => editTask(taskEl, task));
 
-			const taskDeleteButton = taskEl.querySelector('div.delete-task');
+			const taskDeleteButton = taskEl.querySelector('.delete-task');
 			taskDeleteButton.addEventListener('click', () => startTaskDeletion(task.id));
 
 			tasksList.appendChild(taskEl);
@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	function editTask(taskEl, task){
-		const taskText = taskEl.querySelector('span.task-text');
+		const taskText = taskEl.querySelector('.task-text');
 		const editTaskInput = document.createElement('input');
 		editTaskInput.type = 'text';
 		editTaskInput.className = 'form-input task-edit-input';
