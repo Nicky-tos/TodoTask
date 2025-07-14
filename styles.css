@@ -100,7 +100,7 @@ body{
 	transition: background-color 0.3s ease;
 }
 
-body.dark-theme {
+html.dark-theme body{
 	background-color: var(--black);
 	color: var(--white);
 }
@@ -217,15 +217,12 @@ div.search-container .icon {
 	border-radius: 8px;
 	color: var(--white);
 	background-color: var(--purple);
+	margin-right: 16px;
 }
 
 .form-select > option{
 	background-color: var(--white);
 	color: var(--purple);
-}
-
-select.sortType{
-	margin-right: 16px;
 }
 
 .clear-all-container {
@@ -281,16 +278,16 @@ input:checked + .clear-all-slider:before {
 }
 
 
-button.toggleTheme{
+button.toggle-theme{
 	display: flex;
 	padding: 8px;
 	width: 38px;
 	height: 38px;
 }
 
-.addButton{
+.add-button{
 	position: fixed;
-	right: 8px;
+	right: 15%;
 	bottom: 32px;
 	width: 50px;
 	height: 50px;
@@ -300,18 +297,18 @@ button.toggleTheme{
 	border-radius: 50%;
 }
 
-.tasksList-container{
+.tasks-list-container{
 	max-width: 520px;
 	margin: 30px auto 0;
 }
 
-ul.tasksList li {
+ul.tasks-list li {
 	padding: 17px 0;
 	display: flex; 
 	align-items: center;
 }
 
-ul.tasksList li:not(:last-child) {
+ul.tasks-list li:not(:last-child) {
 	border-bottom: 1px solid #6C63FF7F;
 }
 
@@ -329,55 +326,60 @@ input.form-checkbox:checked{
 	background-color: var(--purple);
 	background-size: 15px;
 	background-repeat: no-repeat;
-	background-position: center 4px;
-	border: none;
+	background-position: 5.5px 3px;
 }
 
-.taskCheckbox{
+.task-checkbox{
 	margin-right: 17px;
 	flex-shrink: 0;
 }
 
-.taskEditInput{
+.task-edit-input{
 	margin-right: 17px;
 }
 
-input.form-checkbox:checked + span.taskText{
+input.form-checkbox:checked + span.task-text{
 	opacity: 0.5;
 	text-decoration: line-through;
 	font-weight: 400;
 }
 
-span.taskText{
+span.task-text{
 	font-size: 20px;
 }
 
-.editTask{
-	margin-right: 10px;
+.task-actions{
+	display: flex;
+	align-items: center;
+	margin-left: auto;
 }
 
-.editTask, .deleteTask{
+.edit-task, .delete-task{
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	width: 18px;
 	height: 18px;
+	margin-left: 8px;
 }
 
-.editTask:hover svg path{
+.edit-task:hover svg path{
 	stroke: var(--purple);
 }
 
-.deleteTask:hover svg path{
+.delete-task:hover svg path{
 	stroke: #E50000;
 }
 
-.emptyList{
+.empty-list{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 }
-.emptyList img{
+.empty-list img{
 	width: 220px;
 }
-.emptyList span{
+.empty-list span{
 	margin-top: 20px;
 	font-weight: 400;
 	font-size: 20px;
@@ -535,4 +537,8 @@ span.taskText{
 .notification-btn.cancel {
 	background-color: red;
 	color: var(--white);
+}
+
+.confirm-delete-modal > .modal-container{
+	min-height: unset;
 }
